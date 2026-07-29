@@ -239,6 +239,11 @@ main { overflow: hidden; }
   background: #b04676;
   border-color: #fff;
 }
+.highlight-marker {
+  min-width: 30px;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", Arial, sans-serif;
+  font-weight: 800;
+}
 .route-direction-arrow {
   color: #fff;
   background: #17643f;

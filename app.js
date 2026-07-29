@@ -88,6 +88,13 @@ const attractions = [
 ];
 
 const highlightStops = [
+  ["Going-to-the-Sun Road", 48.6959, -113.7183, "&#9728;&#65039;"],
+  ["Yellowstone National Park", 44.4280, -110.5885, "&#9832;&#65039;"],
+  ["Grand Teton National Park", 43.7904, -110.6818, "&#127956;&#65039;"],
+  ["Jackson Hole", 43.4799, -110.7624, "&#129312;"],
+  ["Salt Lake City - skocznia", 40.7608, -111.8910, "&#9975;&#65039;"],
+  ["Williams - Route 66", 35.2495, -112.1910, "66"],
+  ["Wielki Kanion", 36.0544, -112.1401, "&#127748;"],
   ["Monterey · wieloryby", 36.6002, -121.8947, "🐋"],
   ["Jasper · Columbia Icefield", 52.2203, -117.2246, "🧊"],
   ["Lake Louise · turkusowe jezioro", 51.4254, -116.1773, "💎"],
