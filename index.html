@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interaktywna mapa rodzinnej wyprawy po Kanadzie i zachodnich Stanach Zjednoczonych, 6–25 lipca 2026.">
+  <title>Nasza wielka wyprawa · Kanada i USA 2026</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__shade"></div>
+    <div class="hero__content">
+      <p class="eyebrow">6–25 lipca 2026 · rodzinna wyprawa</p>
+      <h1>Od prerii po Pacyfik</h1>
+      <p class="hero__lead">Edmonton → parki Gór Skalistych → Yellowstone → pustynie Utah i Arizony → Kalifornia → Edmonton</p>
+      <div class="hero__stats">
+        <span><strong>423</strong> zdjęcia</span>
+        <span><strong>2</strong> kraje</span>
+        <span><strong>20</strong> dni</span>
+        <span><strong>≈ 7 900</strong> km autem</span>
+      </div>
+      <a class="hero__cta" href="#map-section">Zobacz trasę ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="map-section" class="map-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Cała trasa</p>
+          <h2>Nasza podróż · Kanada i USA 2026</h2>
+        </div>
+        <p>Nowa mapa oparta na rzeczywistym przebiegu dróg: cała podróż przez Kanadę i USA, lot z Los Angeles do Edmonton oraz końcowa pętla po Albercie.</p>
+      </div>
+      <div class="map-shell">
+        <div id="map" aria-label="Dokładna mapa trasy podróży po Kanadzie i USA"></div>
+        <div class="map-legend" aria-label="Legenda mapy">
+          <span><i class="legend-main"></i> trasa samochodowa</span>
+          <span><i class="legend-alberta"></i> pętla w Albercie</span>
+          <span><i class="legend-flight"></i> lot do Edmonton</span>
+        </div>
+        <div class="map-view-buttons" aria-label="Widok mapy">
+          <button type="button" data-map-view="all">Cała podróż</button>
+          <button type="button" data-map-view="alberta">Pętla Alberta</button>
+        </div>
+      </div>
+      <div id="stop-strip" class="stop-strip" aria-label="Przystanki podróży"></div>
+    </section>
+
+    <section id="whale-excursion" class="whale-section" aria-labelledby="whale-title" hidden>
+      <div class="whale-copy">
+        <p class="eyebrow">Osobna wycieczka · 19 lipca</p>
+        <h2 id="whale-title">Wyprawa na wieloryby · Monterey, California</h2>
+        <p>Rejs po zatoce Monterey i spotkanie z wielorybami na otwartym Pacyfiku — jeden z najbardziej niezwykłych momentów całej podróży.</p>
+      </div>
+      <div class="whale-videos">
+        <figure class="whale-photo">
+          <img src="Zdjęcia podróży/monterey-wyprawa-na-wieloryby.png" alt="Kasia z rodziną na łodzi podczas wyprawy na wieloryby w Monterey">
+          <figcaption>Na pokładzie podczas wyprawy na wieloryby</figcaption>
+        </figure>
+        <figure class="whale-photo">
+          <img src="Zdjęcia podróży/monterey-wieloryb.png" alt="Ogon wieloryba wynurzający się z oceanu w zatoce Monterey">
+          <figcaption>Spotkanie z wielorybem na Pacyfiku</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="Zdjęcia podróży/137_2026-07-19.jpg">
+            <source src="Zdjęcia podróży/Nowe z archiwów/Photos-1-001 (1)/20260719_134911.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzania filmu.
+          </video>
+          <figcaption>Rejs po zatoce Monterey</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="Zdjęcia podróży/136_2026-07-19.jpg">
+            <source src="Zdjęcia podróży/WhatsApp Video 2026-07-19 at 21.21.45.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzania filmu.
+          </video>
+          <figcaption>Wieloryby na Pacyfiku</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="Zdjęcia podróży/monterey-wieloryb.png">
+            <source src="Zdjęcia podróży/monterey-wieloryby-2026-07-19-150429.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzania filmu.
+          </video>
+          <figcaption>Kolejne spotkanie z wielorybami podczas rejsu</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="Zdjęcia podróży/monterey-wieloryb.png">
+            <source src="Zdjęcia podróży/monterey-wieloryby-film-2026-07-19-213056.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzania filmu.
+          </video>
+          <figcaption>Wieloryby podczas wyprawy w Monterey</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Dziennik zdjęciowy</p>
+          <h2>Wyprawa dzień po dniu</h2>
+        </div>
+        <p>Galerie są ułożone według czasu wykonania zdjęć. Kliknij fotografię, aby zobaczyć ją w większym rozmiarze.</p>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Kanada i zachodnie USA · lipiec 2026</p>
+    <p class="credit">Mapa © OpenStreetMap contributors</p>
+  </footer>
+
+  <dialog id="lightbox">
+    <button id="lightbox-close" aria-label="Zamknij">×</button>
+    <button id="lightbox-prev" class="lightbox-nav" aria-label="Poprzednie zdjęcie">‹</button>
+    <img id="lightbox-image" alt="">
+    <button id="lightbox-next" class="lightbox-nav" aria-label="Następne zdjęcie">›</button>
+    <p id="lightbox-caption"></p>
+  </dialog>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="route_data.js"></script>
+  <script src="added_photos.js"></script>
+  <script src="extra_photos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
