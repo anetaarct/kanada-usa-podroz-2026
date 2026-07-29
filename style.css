@@ -224,14 +224,20 @@ main { overflow: hidden; }
 .alberta-route-marker {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   border: 3px solid #fff;
   border-radius: 50%;
-  color: #fff;
   background: #17643f;
   box-shadow: 0 3px 12px rgba(0,0,0,.35);
-  font: 800 13px/1 Arial, sans-serif;
+  font: 400 20px/1 "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+.highlight-marker--rollercoaster {
+  width: 34px;
+  height: 34px;
+  font-size: 21px;
+  background: #b04676;
+  border-color: #fff;
 }
 .route-direction-arrow {
   color: #fff;

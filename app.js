@@ -348,13 +348,21 @@ const markerIcon = number => L.divIcon({
 });
 
 const albertaMarkers = [];
+const albertaStopIcons = [
+  "&#127968;", // Edmonton — dom
+  "&#128059;", // Cline River — niedźwiedź
+  "&#129482;", // Columbia Icefield — lód
+  "&#128142;", // Lake Louise — turkusowe jezioro
+  "&#9968;&#65039;", // Banff — góry
+  "&#128758;", // Lake Minnewanka — łódź
+  "&#127956;&#65039;" // Canmore — górski krajobraz
+];
 routeData.albertaStops.slice(0, 7).forEach((stop, index) => {
-  const number = index === 0 ? "1/8" : stop.n;
   const icon = L.divIcon({
     className: "",
-    html: `<div class="alberta-route-marker">${number}</div>`,
-    iconSize: [34, 34],
-    iconAnchor: [17, 17]
+    html: `<div class="alberta-route-marker" aria-label="${stop.name}">${albertaStopIcons[index]}</div>`,
+    iconSize: [38, 38],
+    iconAnchor: [19, 19]
   });
   const marker = L.marker(stop.coord, { icon, zIndexOffset: 900 })
     .addTo(map)
@@ -430,6 +438,17 @@ highlightStops.forEach(([name,lat,lng,symbol]) => {
     .addTo(map)
     .bindPopup(`<div class="highlight-popup"><strong>${symbol} ${name}</strong></div>`);
 });
+
+const losAngelesIcon = L.divIcon({
+  className: "",
+  html: `<div class="highlight-marker highlight-marker--rollercoaster" aria-label="Los Angeles — rollercoaster">&#127906;</div>`,
+  iconSize: [34,34],
+  iconAnchor: [17,17],
+  popupAnchor: [0,-15]
+});
+L.marker([34.1381, -118.3534], { icon: losAngelesIcon, zIndexOffset: 760 })
+  .addTo(map)
+  .bindPopup(`<div class="highlight-popup"><strong>&#127906; Los Angeles — rollercoaster</strong></div>`);
 
 const strip = document.getElementById("stop-strip");
 [...roadStops, ...returnStops.slice(1)].forEach(([name,lat,lng]) => {
